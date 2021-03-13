@@ -94,6 +94,7 @@ a, a:link, a:visited, a:active, a:hover {
 
   &__router-container {
     padding: 12px;
+    width: 100%;
   }
 
   &__menu-item {
