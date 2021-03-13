@@ -1,14 +1,14 @@
 import { shallowMount } from '@vue/test-utils';
-import Camera from './Camera.vue';
+import Picture from './Picture.vue';
 
-describe('CameraView.vue', () => {
+describe('Picture.vue', () => {
   let wrapper: any;
   beforeEach(() => {
-    wrapper = shallowMount(Camera, {});
+    wrapper = shallowMount(Picture, {});
   });
 
   it('Should be defined', () => {
-    expect(wrapper.is(Camera)).not.toBeUndefined();
+    expect(wrapper.is(Picture)).not.toBeUndefined();
   });
 
   it('Should match snapshot', () => {
