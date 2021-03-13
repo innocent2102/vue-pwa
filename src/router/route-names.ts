@@ -1,5 +1,5 @@
 export enum RouteName {
   HOME = 'home',
   ABOUT = 'about',
-  CAMERA = 'camera'
+  CAMERA_VIEW = 'camera-view'
 }

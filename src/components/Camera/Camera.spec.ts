@@ -1,7 +1,7 @@
 import { shallowMount } from '@vue/test-utils';
 import Camera from './Camera.vue';
 
-describe('Camera.vue', () => {
+describe('CameraView.vue', () => {
   let wrapper: any;
   beforeEach(() => {
     wrapper = shallowMount(Camera, {});
