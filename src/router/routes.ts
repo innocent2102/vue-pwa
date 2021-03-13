@@ -11,7 +11,7 @@ export const routes: Array<RouteConfig> = [
   {
     path: '/camera',
     name: RouteName.CAMERA,
-    component: () => import(/* webpackChunkName: "about" */ '../views/About/About.vue')
+    component: () => import(/* webpackChunkName: "camera" */ '../views/Camera/Camera.vue')
   },
   {
     path: '/about',
