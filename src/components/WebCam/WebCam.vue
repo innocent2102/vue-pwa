@@ -17,14 +17,29 @@ import { Component, Vue } from 'vue-property-decorator';
   components: {},
 })
 export default class Camera extends Vue {
+  mediaConstraints: MediaStreamConstraints = {
+    video: {
+      width: {
+        min: 640,
+        ideal: 1280,
+        max: 1920
+      },
+      height: {
+        min: 360,
+        ideal: 720,
+        max: 1080
+      }
+    }
+  }
+
   created () {
     this.initCameraView()
   }
 
   initCameraView (): void {
-    const hasGetUserMediaProperty = 'mediaDevices' in navigator && 'getUserMedia' in navigator.mediaDevices;
-    if (hasGetUserMediaProperty) {
-      navigator.mediaDevices.getUserMedia({ video: true }).then(stream => {
+    const hasMediaDevicesSupport = 'mediaDevices' in navigator && 'getUserMedia' in navigator.mediaDevices;
+    if (hasMediaDevicesSupport) {
+      navigator.mediaDevices.getUserMedia(this.mediaConstraints).then(stream => {
         const videoPlayer = document.querySelector('video');
         videoPlayer.srcObject = stream;
         videoPlayer.play();

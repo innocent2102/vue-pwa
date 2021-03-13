@@ -1,6 +1,6 @@
 <template>
   <div class="pwa-picture">
-    Picture Component
+    <canvas></canvas>
   </div>
 </template>
 
