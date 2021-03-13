@@ -64,6 +64,7 @@ export default class Home extends Vue {
   items = [
     { title: 'Home', icon: 'mdi-image', url: '/' },
     { title: 'About', icon: 'mdi-help-box', url: '/about' },
+    { title: 'Camera', icon: 'mdi-camera', url: '/camera' }
   ];
   right = null;
 }
