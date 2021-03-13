@@ -1,11 +1,4 @@
 <template>
-<!--    <v-app>-->
-<!--      <router-link to="/">Home</router-link>-->
-<!--      <router-link to="/about">About</router-link>-->
-<!--      <router-view/>-->
-<!--    </v-app>-->
-
-
   <div class="pwa-app__main-container">
     <v-card
       height="100%"
