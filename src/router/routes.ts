@@ -1,5 +1,5 @@
 import { RouteConfig } from 'vue-router';
-import Home from '@/views/Home.vue';
+import Home from '@/views/Home/Home.vue';
 import { RouteName } from '@/router/route-names';
 
 export const routes: Array<RouteConfig> = [
@@ -11,11 +11,11 @@ export const routes: Array<RouteConfig> = [
   {
     path: '/camera',
     name: RouteName.CAMERA,
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/About/About.vue')
   },
   {
     path: '/about',
     name: RouteName.ABOUT,
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/About/About.vue')
   }
 ]
