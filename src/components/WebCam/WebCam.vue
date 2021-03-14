@@ -1,9 +1,9 @@
 <template>
-  <div class="pwa-camera">
-    <div class="pwa-camera__video-wrapper">
-      <video class="pwa-camera__video" autoplay></video>
+  <div class="pwa-web-cam">
+    <div class="pwa-web-cam__video-wrapper">
+      <video id="pwa-web-cam__video" class="pwa-web-cam__video" autoplay></video>
       <button
-        class="pwa-camera__snap-btn"
+        class="pwa-web-cam__snap-btn"
         @click="$emit('takePicture')"
       >Snap</button>
     </div>
