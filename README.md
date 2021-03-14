@@ -1,6 +1,7 @@
 # vue-pwa
 
 ## Project setup
+### Requires Node version 14
 ```
 npm install
 ```
