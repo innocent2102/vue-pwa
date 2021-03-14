@@ -4,7 +4,7 @@ import './registerServiceWorker'
 import router from './router'
 import store from './store'
 import vuetify from './plugins/vuetify';
-import axios from 'axios'
+import axios, { AxiosAdapter } from 'axios'
 import VueAxios from 'vue-axios'
 import { cacheAdapterEnhancer } from 'axios-extensions';
 Vue.use(VueAxios, axios);
@@ -12,7 +12,7 @@ Vue.use(VueAxios, axios);
 Vue.config.productionTip = false
 
 Vue.use(VueAxios, axios.create({
-  adapter: cacheAdapterEnhancer(axios.defaults.adapter as never)
+  adapter: cacheAdapterEnhancer(axios.defaults.adapter as AxiosAdapter)
 }));
 
 new Vue({

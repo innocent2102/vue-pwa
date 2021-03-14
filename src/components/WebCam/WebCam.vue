@@ -40,9 +40,9 @@ export default class Camera extends Vue {
     const hasMediaDevicesSupport = 'mediaDevices' in navigator && 'getUserMedia' in navigator.mediaDevices;
     if (hasMediaDevicesSupport) {
       navigator.mediaDevices.getUserMedia(this.mediaConstraints).then(stream => {
-        const videoPlayer = document.querySelector('video');
-        videoPlayer.srcObject = stream;
-        videoPlayer.play();
+        const videoPlayer = document.querySelector('#pwa-web-cam__video') as HTMLVideoElement;
+          videoPlayer.srcObject = stream;
+          videoPlayer.play();
       })
     } else {
       alert('Cannot get Media Devices');
